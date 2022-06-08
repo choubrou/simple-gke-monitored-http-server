@@ -1,0 +1,11 @@
+apiVersion: monitoring.googleapis.com/v1
+kind: PodMonitoring
+metadata:
+  name: my-cool-server-monitoring
+spec:
+  selector:
+    matchLabels:
+      app: my-cool-server
+  endpoints:
+  - port: 8080
+    interval: 5s

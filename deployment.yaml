@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-cool-server
+spec:
+  replicas: 12
+  selector:
+    matchLabels:
+      app: my-cool-server
+  template:
+    metadata:
+      labels:
+        app: my-cool-server
+    spec:
+      containers:
+      - name: my-cool-server
+        image: us-central1-docker.pkg.dev/synthetic-grail-352701/my-repo/my-http-server:latest
+        ports:
+        - containerPort: 8080
