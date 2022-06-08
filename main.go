@@ -28,6 +28,6 @@ func main() {
 	http.Handle("/metrics", promhttp.Handler())
 	http.HandleFunc("/cool", coolHandler)
 	http.HandleFunc("/", hello)
-  fmt.Println("launching the http server...")
+	fmt.Println("launching the http server...")
 	http.ListenAndServe(":8080", nil)
 }
