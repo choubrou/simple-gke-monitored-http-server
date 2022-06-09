@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-cool-server
 spec:
-  replicas: 12
+  replicas: 3
   selector:
     matchLabels:
       app: my-cool-server
